@@ -53,9 +53,9 @@
               </makeArtifact>
             </linkerLibProjectItem>
             <linkerLibLibItem>avahi-client</linkerLibLibItem>
-            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libavahi-common.a</linkerLibFileItem>
-            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libmosquitto.so</linkerLibFileItem>
             <linkerLibFileItem>/usr/local/lib/liblogger_library.a</linkerLibFileItem>
+            <linkerLibLibItem>avahi-common</linkerLibLibItem>
+            <linkerLibLibItem>mosquitto</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

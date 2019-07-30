@@ -52,17 +52,13 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=../RVStuff/libmqttrv/dist/Debug/GNU-Linux/liblibmqttrv.a -lavahi-client /usr/lib/x86_64-linux-gnu/libavahi-common.a /usr/lib/x86_64-linux-gnu/libmosquitto.so /usr/local/lib/liblogger_library.a
+LDLIBSOPTIONS=../RVStuff/libmqttrv/dist/Debug/GNU-Linux/liblibmqttrv.a -lavahi-client /usr/local/lib/liblogger_library.a -lavahi-common -lmosquitto
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/avahi_mqtt
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/avahi_mqtt: ../RVStuff/libmqttrv/dist/Debug/GNU-Linux/liblibmqttrv.a
-
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/avahi_mqtt: /usr/lib/x86_64-linux-gnu/libavahi-common.a
-
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/avahi_mqtt: /usr/lib/x86_64-linux-gnu/libmosquitto.so
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/avahi_mqtt: /usr/local/lib/liblogger_library.a
 
@@ -82,8 +78,6 @@ ${OBJECTDIR}/main.o: main.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} -r ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmosquitto.so
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/avahi_mqtt
 
 # Subprojects
 .clean-subprojects:
