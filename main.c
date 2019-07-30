@@ -12,7 +12,7 @@
 
 int main(int argc, char*argv[]) 
 {
-    char    **brokerNames = MQTT_FindBrokers();
+    MQTTBrokers_t  *list = MQTT_FindAllBrokers();
 }
 
 
