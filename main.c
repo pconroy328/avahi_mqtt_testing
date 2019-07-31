@@ -22,6 +22,14 @@ int main(int argc, char*argv[])
     }
     
     MQTT_CleanUp_After_Find();
+    
+    *head = MQTT_FindABroker( "mqttrv", "_mqtt._tcp", NULL );
+           
+    LL_FOREACH_SAFE( head, element1, element2) {
+        printf( "Found service at host [%s], address [%s], port [%d], description [%s]\n", element1->hostName, element1->address, element1->portNumber, element1->description );
+    }
+    
+    MQTT_CleanUp_After_Find();    
 }
 
 
